@@ -63,13 +63,11 @@ header p {
    3. NAVEGACIÓN (NAV)
    ========================================== */
 nav.nav-horizontal {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    margin: 0;
+    display: inline-block;
 }
 
 nav.nav-horizontal a {
+    nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;

@@ -63,11 +63,16 @@ header p {
    3. NAVEGACIÓN (NAV)
    ========================================== */
 nav.nav-horizontal {
-    display: inline-block;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 0;
+    background-color: #2ece40; /* Fondo verde para la barra de navegación */
+    padding: 10px 20px; /* Espaciado interno para dar altura a la barra */
+    border-radius: 6px; /* Opcional: bordes redondeados para la barra */
 }
 
 nav.nav-horizontal a {
-    nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -77,15 +82,17 @@ nav.nav-horizontal a {
     transition: all 0.2s ease-in-out;
 }
 
+/* Pestaña activa (verde más oscuro para destacar) */
 nav.nav-horizontal a.active {
-    background-color: #2ece40;
+    background-color: #23a032;
     color: #ffffff;
-    padding: 7px 16px;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Efecto al pasar el cursor sobre los enlaces no activos */
 nav.nav-horizontal a:not(.active):hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.25);
     border-radius: 4px;
 }
 

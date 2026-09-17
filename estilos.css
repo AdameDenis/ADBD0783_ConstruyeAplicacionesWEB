@@ -64,12 +64,13 @@ header p {
    ========================================== */
 nav.nav-horizontal {
     display: flex;
-    gap: 15px;
+    justify-content: center; /* Centra los botones horizontalmente */
     align-items: center;
-    margin: 0;
-    background-color: #2ece40; /* Fondo verde para la barra de navegación */
-    padding: 10px 20px; /* Espaciado interno para dar altura a la barra */
-    border-radius: 6px; /* Opcional: bordes redondeados para la barra */
+    gap: 15px;
+    width: 100%;             /* Se extiende de esquina a esquina */
+    background-color: #2ece40; /* Fondo verde */
+    padding: 10px 0;         /* Espaciado superior e inferior */
+    box-sizing: border-box;  /* Evita que el padding desborde el ancho */
 }
 
 nav.nav-horizontal a {

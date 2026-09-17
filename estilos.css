@@ -62,24 +62,14 @@ header p {
 /* ==========================================
    3. NAVEGACIÓN (NAV)
    ========================================== */
-nav {
-    width: 100%;
-    background-color: #008000;
-    padding: 8px 15px;
-}
-
-nav ul {
-    list-style: none;
+nav.nav-horizontal {
     display: flex;
     gap: 15px;
+    align-items: center;
     margin: 0;
 }
 
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
+nav.nav-horizontal a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -89,14 +79,14 @@ nav ul li a {
     transition: all 0.2s ease-in-out;
 }
 
-nav ul li.active a {
+nav.nav-horizontal a.active {
     background-color: #2ece40;
     color: #ffffff;
     padding: 7px 16px;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
 }
 
-nav ul li:not(.active) a:hover {
+nav.nav-horizontal a:not(.active):hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
 }

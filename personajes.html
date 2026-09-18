@@ -1,43 +1,54 @@
 <!DOCTYPE html>
+<!-- Estándar HTML5 e idioma general de la página -->
 <html lang="es">
 <head>
+    <!-- Configuración de caracteres utf-8 y vista responsiva para dispositivos móviles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Septiembre - Personajes Célebres</title>
+    
+    <!-- Enlace a la hoja de estilos CSS general -->
     <link rel="stylesheet" href="estilos.css">
 </head>
+
+<!-- Inicio del cuerpo del documento (estructura visible de la página) -->
 <body>
 
-    <!-- Encabezado -->
+    <!-- Encabezado con logo y título de sección -->
     <header>
         <img class="logo" src="bandera.jpg" alt="Bandera de México">
         <h1>Personajes célebres</h1>
         <p>Septiembre</p>
     </header>
 
-    <!-- Navegación -->
+    <!-- Menú de navegación principal (con la pestaña de Personajes activa) -->
     <nav class="nav-horizontal">
        <a href="index.html">Inicio</a>
        <a href="fechas.html">Fechas importantes</a>
+       <!-- Enlace activo -->
        <a href="personajes.html" class="active">Personajes</a>
        <a href="datos-curiosos.html">Datos curiosos</a>
     </nav>
 
-
-    <!-- Contenido principal -->
+    <!-- Sección del contenido principal que agrupa las tarjetas -->
     <main>
+        <!-- Contenedor Flexbox que organiza el listado vertical de tarjetas -->
         <div class="characters-container">
             
+            <!-- TARJETA 1: Miguel Hidalgo -->
             <div class="character-card">
+                <!-- Bloque izquierdo con marco verde para la fotografía -->
                 <div class="character-image-box">
                     <img src="hidalgo.jpg" alt="Miguel Hidalgo y Costilla">
                 </div>
+                <!-- Bloque derecho en rojo con el título y texto descriptivo -->
                 <div class="character-info-box">
                     <h3>Miguel Hidalgo y Costilla</h3>
                     <p>Sacerdote conocido como el "Padre de la Patria". Dio el Grito de Dolores la madrugada del 16 de septiembre de 1810 para iniciar la lucha.</p>
                 </div>
             </div>
 
+            <!-- TARJETA 2: Ignacio Allende -->
             <div class="character-card">
                 <div class="character-image-box">
                     <img src="allende.jpg" alt="Ignacio Allende">
@@ -48,6 +59,7 @@
                 </div>
             </div>
 
+            <!-- TARJETA 3: Josefa Ortiz de Domínguez -->
             <div class="character-card">
                 <div class="character-image-box">
                     <img src="josefa.jpg" alt="Josefa Ortiz de Domínguez">
@@ -58,6 +70,7 @@
                 </div>
             </div>
 
+            <!-- TARJETA 4: Juan Aldama -->
             <div class="character-card">
                 <div class="character-image-box">
                     <img src="aldama.jpg" alt="Juan Aldama">
@@ -68,6 +81,7 @@
                 </div>
             </div>
 
+            <!-- TARJETA 5: José María Morelos -->
             <div class="character-card">
                 <div class="character-image-box">
                     <img src="morelos.jpg" alt="José María Morelos y Pavón">
@@ -78,6 +92,7 @@
                 </div>
             </div>
 
+            <!-- TARJETA 6: Vicente Guerrero -->
             <div class="character-card">
                 <div class="character-image-box">
                     <img src="guerrero.jpg" alt="Vicente Guerrero">
@@ -88,6 +103,7 @@
                 </div>
             </div>
 
+            <!-- TARJETA 7: Guadalupe Victoria -->
             <div class="character-card">
                 <div class="character-image-box">
                     <img src="victoria.jpg" alt="Guadalupe Victoria">
@@ -98,6 +114,7 @@
                 </div>
             </div>
 
+            <!-- TARJETA 8: Leona Vicario -->
             <div class="character-card">
                 <div class="character-image-box">
                     <img src="vicario.jpg" alt="Leona Vicario">
@@ -108,6 +125,7 @@
                 </div>
             </div>
 
+            <!-- TARJETA 9: Agustín de Iturbide -->
             <div class="character-card">
                 <div class="character-image-box">
                     <img src="iturbide.jpg" alt="Agustín de Iturbide">
@@ -118,10 +136,10 @@
                 </div>
             </div>
 
-        </div>
+        </div> <!-- Cierre del contenedor de personajes -->
     </main>
 
-    <!-- Pie de página -->
+    <!-- Pie de página con datos -->
     <footer>
         <p>Adame Durán Brenda Denis 5-J 0783</p>
     </footer>

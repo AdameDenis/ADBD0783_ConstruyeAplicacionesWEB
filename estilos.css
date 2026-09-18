@@ -1,365 +1,398 @@
 /* ==========================================
    1. RESETEO Y ESTILOS GENERALES
    ========================================== */
+/* Selecciona todos los elementos del documento para unificar el modelo de caja y eliminar márgenes por defecto */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto total de los elementos */
+    margin: 0;              /* Elimina los márgenes exteriores por defecto */
+    padding: 0;             /* Elimina los rellenos interiores por defecto */
+    font-family: 'Georgia', 'Times New Roman', serif; /* Define la familia tipográfica principal */
 }
 
+/* Configuración del contenedor principal de la página */
 body {
-    background-color: #000000;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
+    background-color: #000000; /* Fondo negro para el sitio */
+    color: #ffffff;            /* Texto blanco por defecto */
+    display: flex;             /* Habilita maquetación Flexbox */
+    flex-direction: column;    /* Aplica una alineación vertical (en columna) a los hijos */
+    align-items: center;       /* Centra horizontalmente los elementos dentro del body */
+    min-height: 100vh;         /* Garantiza que ocupe al menos el 100% del alto de la ventana */
+    width: 100%;               /* Ancho completo del dispositivo */
 }
 
 /* ==========================================
    2. ENCABEZADO (HEADER)
    ========================================== */
+/* Encabezado superior completo */
 header {
-    width: 100%;
-    background-color: #c40000;
-    padding: 20px;
-    position: relative;
-    text-align: center;
+    width: 100%;               /* Ocupa todo el ancho disponible */
+    background-color: #c40000; /* Fondo rojo corporativo/temático */
+    padding: 20px;             /* Espaciado interno general */
+    position: relative;        /* Establece un contexto de posicionamiento para la marca/logo */
+    text-align: center;        /* Centra el texto de los títulos */
 }
 
+/* Posicionamiento y formato del logotipo flotante */
 .logo {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 38px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    object-fit: cover;
+    position: absolute;                      /* Posicionamiento absoluto respecto al header */
+    left: 20px;                              /* Distancia desde el borde izquierdo */
+    top: 50%;                                /* Se ubica al 50% de la altura */
+    transform: translateY(-50%);             /* Centrado vertical exacto mediante transformación */
+    width: 60px;                             /* Ancho fijo de la imagen */
+    height: 38px;                            /* Alto fijo de la imagen */
+    border-radius: 4px;                      /* Bordes ligeramente redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);/* Sombra para dar profundidad sobre el fondo rojo */
+    object-fit: cover;                       /* Mantiene la proporción de la imagen sin deformarla */
 }
 
+/* Título principal del sitio web */
 header h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #ffffff;
-    letter-spacing: 1px;
-    margin-bottom: 2px;
-    -webkit-text-stroke: 1.5px #000000;
+    font-size: 4rem;                         /* Tamaño de letra grande e llamativo */
+    font-weight: bold;                       /* Texto en negrita */
+    color: #ffffff;                          /* Color de relleno del texto */
+    letter-spacing: 1px;                     /* Espaciado entre letras */
+    margin-bottom: 2px;                      /* Pequeño espacio inferior */
+    -webkit-text-stroke: 1.5px #000000;     /* Borde negro alrededor de cada letra (compatibilidad WebKit) */
     text-shadow: 3px 3px 0px #000000, 
-                 5px 5px 8px rgba(0, 0, 0, 0.6);
+                 5px 5px 8px rgba(0, 0, 0, 0.6); /* Sombra de texto doble para efecto de relieve */
 }
 
+/* Subtítulo o lema del encabezado */
 header p {
-    font-size: 1.2rem;
-    color: #ffffff;
-    font-style: italic;
-    text-shadow: 1px 1px 3px #000000;
+    font-size: 1.2rem;                       /* Tamaño de fuente intermedio */
+    color: #ffffff;                          /* Color de texto blanco */
+    font-style: italic;                      /* Estilo en cursiva */
+    text-shadow: 1px 1px 3px #000000;        /* Sombra leve para asegurar lectura clara sobre rojo */
 }
 
 /* ==========================================
    3. NAVEGACIÓN (NAV)
    ========================================== */
+/* Barra de navegación principal en sentido horizontal */
 nav.nav-horizontal {
-    display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    align-items: center;
-    gap: 15px;
-    width: 100%;             /* Se extiende de esquina a esquina */
-    background-color: #2ece40; /* Fondo verde */
-    padding: 10px 0;         /* Espaciado superior e inferior */
-    box-sizing: border-box;  /* Evita que el padding desborde el ancho */
+    display: flex;            /* Distribución lineal con Flexbox */
+    justify-content: center;  /* Centra los botones de navegación horizontalmente */
+    align-items: center;      /* Alinea verticalmente el contenido */
+    gap: 15px;                /* Separación uniforme entre cada botón */
+    width: 100%;              /* Ocupa todo el ancho de pantalla de extremo a extremo */
+    background-color: #2ece40;/* Fondo verde brillante */
+    padding: 10px 0;          /* Relleno superior e inferior */
+    box-sizing: border-box;   /* Evita que el padding desborde el ancho */
 }
 
+/* Estilos de los enlaces/botones de navegación */
 nav.nav-horizontal a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 8px 16px;
-    display: inline-block;
-    transition: all 0.2s ease-in-out;
+    color: #ffffff;                         /* Texto en color blanco */
+    text-decoration: none;                  /* Quita el subrayado predeterminado de los enlaces */
+    font-weight: bold;                      /* Texto resaltado en negrita */
+    font-size: 1.1rem;                      /* Tamaño de letra adaptado a la barra */
+    padding: 8px 16px;                      /* Área de clic expandida con padding interno */
+    display: inline-block;                  /* Permite aplicar paddings y transformaciones */
+    transition: all 0.2s ease-in-out;       /* Transición suave para todos los efectos hover */
 }
 
-/* Pestaña activa (verde más oscuro para destacar) */
+/* Estado de la pestaña activa (sección actual del usuario) */
 nav.nav-horizontal a.active {
-    background-color: #23a032;
-    color: #ffffff;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: #23a032;              /* Tono verde oscuro para resaltar la página actual */
+    color: #ffffff;                         /* Mantiene texto blanco */
+    border-radius: 4px;                     /* Bordes suavizados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);/* Pequeña sombra de elevación */
 }
 
-/* Efecto al pasar el cursor sobre los enlaces no activos */
+/* Efecto hover al pasar el ratón sobre enlaces inactivos */
 nav.nav-horizontal a:not(.active):hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.25); /* Crea un velo blanco semi-transparente */
+    border-radius: 4px;                     /* Redondea las esquinas durante la interacción */
 }
 
 /* ==========================================
    4. CONTENIDO PRINCIPAL (MAIN & SECCIONES)
    ========================================== */
+/* Área contenedora global de la página */
 main {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+    width: 100%;              /* Adaptabilidad horizontal */
+    max-width: 1200px;        /* Límite máximo de anchura en pantallas grandes */
+    display: flex;            /* Disposición interna vertical */
+    flex-direction: column;   /* Alinea componentes en columna */
+    align-items: center;      /* Centra elementos de forma horizontal */
+    padding: 40px 20px;       /* Espaciado con respecto a los bordes de pantalla */
 }
 
+/* Marco o contenedor con apariencia de fotograma/mariposa para imágenes */
 .image-container {
-    background-color: #ffffff;
-    padding: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 30px;
-    max-width: 450px;
-    width: 100%;
+    background-color: #ffffff;               /* Fondo blanco a modo de paspartú o marco */
+    padding: 12px;                           /* Ancho del marco blanco */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);/* Sombra difuminada para destacar del fondo negro */
+    margin-bottom: 30px;                     /* Distancia respecto al siguiente elemento */
+    max-width: 450px;                        /* Ancho tope de la imagen */
+    width: 100%;                             /* Ancho responsivo */
 }
 
+/* Ajustes de renderizado de la imagen interna */
 .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100%;              /* Ajusta la imagen al 100% del contenedor */
+    height: auto;             /* Mantiene la relación de aspecto original */
+    display: block;           /* Elimina espacios blancos inferiores indeseados */
 }
 
+/* Cuadro explicativo o de resumen en tono rojo */
 .info-box {
-    background-color: #c40000;
-    color: #ffffff;
-    padding: 18px 30px;
-    text-align: center;
-    max-width: 800px;
-    width: 100%;
-    font-size: 1.15rem;
-    line-height: 1.5;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    background-color: #c40000;               /* Fondo rojo descriptivo */
+    color: #ffffff;                          /* Texto en blanco contrastado */
+    padding: 18px 30px;                      /* Espaciado amplio interior */
+    text-align: center;                      /* Texto centrado */
+    max-width: 800px;                        /* Ancho máximo legible */
+    width: 100%;                             /* Ancho relativo */
+    font-size: 1.15rem;                      /* Tamaño de fuente ligeramente incrementado */
+    line-height: 1.5;                        /* Altura de línea para mejorar legibilidad */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);/* Sombra inferior suave */
 }
 
-/* Títulos de sección con margen para no pegar a los recuadros */
+/* Encabezados de sección con margen suficiente para evitar solapamientos */
 .section-title {
-    font-size: 2.5rem;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 35px;
-    font-weight: normal;
+    font-size: 2.5rem;        /* Tamaño tipográfico destacado */
+    color: #ffffff;           /* Blanco puro */
+    text-align: center;       /* Alineado al centro */
+    margin-top: 10px;         /* Espaciado respecto a la parte superior */
+    margin-bottom: 35px;      /* Separación con el bloque inferior */
+    font-weight: normal;      /* Sin negrita para equilibrio visual */
 }
 
+/* Subtítulos secundarios de sección */
 .sub-title {
-    font-size: 2.1rem;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 35px;
-    font-weight: normal;
+    font-size: 2.1rem;        /* Ligeramente menor que el título principal */
+    color: #ffffff;           /* Blanco puro */
+    text-align: center;       /* Centrado horizontal */
+    margin-top: 60px;         /* Espacio amplio superior para separar bloques */
+    margin-bottom: 35px;      /* Separación con las tarjetas/elementos subsiguientes */
+    font-weight: normal;      /* Sin grosor pesado */
 }
 
 /* ==========================================
    5. CONTENEDORES Y TARJETAS DE FECHAS
    ========================================== */
+/* Flexbox común para tarjetas alineadas horizontalmente (Línea de tiempo y otras fechas) */
 .timeline-container, 
 .other-dates-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    width: 100%;
+    display: flex;            /* Alineación flex horizontal */
+    justify-content: center;  /* Centra el conjunto de tarjetas */
+    align-items: stretch;     /* Fuerza a que todas las tarjetas tengan exactamente la misma altura */
+    width: 100%;              /* Ancho disponible */
 }
 
+/* Estilos base de cada tarjeta contenedora de fechas */
 .date-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.25s ease, filter 0.25s ease;
-    cursor: pointer;
+    display: flex;                           /* Estructura flexible */
+    flex-direction: column;                  /* Alinea el año (H3) y la descripción (P) verticalmente */
+    justify-content: center;                 /* Centrado vertical interno */
+    align-items: center;                     /* Centrado horizontal interno */
+    text-align: center;                      /* Texto centrado */
+    transition: transform 0.25s ease, filter 0.25s ease; /* Animación suave para elevación y brillo */
+    cursor: pointer;                         /* Indicador de elemento interactivo */
 }
 
+/* Animación durante la interacción del cursor sobre una tarjeta */
 .date-card:hover {
-    transform: translateY(-5px);
-    filter: brightness(1.15);
+    transform: translateY(-5px);             /* Eleva la tarjeta 5px hacia arriba */
+    filter: brightness(1.15);                /* Aumenta el brillo del color de fondo un 15% */
 }
 
-/* Tipografía formal Times New Roman para las fechas */
+/* Estilos tipográficos para el título/año dentro de las tarjetas */
 .date-card h3 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;                       /* Tamaño de fecha destacado */
+    font-weight: bold;                       /* Negrita */
+    font-family: 'Times New Roman', Times, serif; /* Fuente serif formal */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra ligera para lectura */
 }
 
+/* Estilos de los textos explicativos dentro de las tarjetas */
 .date-card p {
-    font-size: 0.92rem;
-    line-height: 1.3;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
+    font-size: 0.92rem;                      /* Tamaño de lectura compacto */
+    line-height: 1.3;                        /* Espaciado entre líneas contenido */
+    font-family: 'Times New Roman', Times, serif; /* Tipografía serif clásica */
+    margin: 0;                               /* Limpia márgenes residuales */
 }
 
-/* --- TARJETAS ROJAS (LÍNEA DEL TIEMPO) --- */
+/* --- TARJETAS ROJAS (LÍNEA DEL TIEMPO EN FORMA DE FLECHA) --- */
 .timeline-container {
-    max-width: 1200px;
-    gap: 8px;
-    margin: 0 auto 30px auto;
+    max-width: 1200px;        /* Límite de ancho para línea del tiempo */
+    gap: 8px;                 /* Separación estrecha entre flechas encadenadas */
+    margin: 0 auto 30px auto; /* Centrado en página y margen inferior */
 }
 
 .timeline-container .date-card {
-    flex: 1 1 190px;
-    background-color: #c40000;
-    color: #ffffff;
-    padding: 16px 22px 16px 34px;
+    flex: 1 1 190px;                         /* Distribución flexible con base de 190px */
+    background-color: #c40000;               /* Fondo rojo */
+    color: #ffffff;                          /* Texto en blanco */
+    padding: 16px 22px 16px 34px;             /* Padding asimétrico para compensar los recortes de la flecha */
+    /* Recorte geométrico en CSS para dar forma de flecha apuntando a la derecha */
     clip-path: polygon(0% 0%, 78% 0%, 100% 50%, 78% 100%, 0% 100%, 12% 50%);
 }
 
 .timeline-container .date-card h3 {
-    margin-bottom: 4px;
+    margin-bottom: 4px;       /* Espacio de separación entre el título y la descripción */
 }
 
 /* --- TARJETAS VERDES (OTRAS FECHAS) --- */
 .other-dates-container {
-    max-width: 900px;
-    gap: 15px;
-    margin: 0 auto 30px auto;
+    max-width: 900px;         /* Ancho más ajustado para la sección secundaria */
+    gap: 15px;                /* Distancia entre tarjetas distribuidas */
+    margin: 0 auto 30px auto; /* Centrado horizontal en la página */
 }
 
 .other-dates-container .date-card {
-    flex: 1 1 240px;
-    background-color: #008000;
-    color: #ffffff;
-    padding: 16px 25px 16px 20px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex: 1 1 240px;                         /* Ancho base flexible más amplio que las flechas */
+    background-color: #008000;               /* Fondo verde oscuro */
+    color: #ffffff;                          /* Texto blanco */
+    padding: 16px 25px 16px 20px;             /* Relleno uniforme */
+    border-radius: 6px;                      /* Bordes suavemente redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Sutil borde translúcido de acabado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);/* Sombra de relieve */
 }
 
 .other-dates-container .date-card h3 {
-    margin-bottom: 6px;
+    margin-bottom: 6px;       /* Separación inferior respecto a la bajada de texto */
 }
 
-/* Contenedor principal de los personajes */
-.characters-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 900px;
-    margin: 20px auto 40px auto;
-}
-
-/* Fila individual de personaje */
-.character-card {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-}
-
-/* Recuadro verde para la foto del personaje */
-.character-image-box {
-    width: 100px;
-    height: 100px;
-    background-color: #008000;
-    padding: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.character-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-color: #ffffff;
-}
-
-/* Recuadro rojo con la información */
-.character-info-box {
-    background-color: #c40000;
-    color: #ffffff;
-    padding: 14px 20px;
-    flex: 1;
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.character-info-box h3 {
-    font-size: 1.15rem;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 4px;
-}
-
-.character-info-box p {
-    font-size: 0.9rem;
-    line-height: 1.35;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-}
 /* ==========================================
-   7. DATOS CURIOSOS (TARJETAS ROJAS)
+   6. SECCIÓN DE PERSONAJES HISTÓRICOS / DESTACADOS
    ========================================== */
-.facts-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    width: 100%;
-    max-width: 950px;
-    margin: 20px auto 30px auto;
+/* Contenedor vertical principal del listado de personajes */
+.characters-container {
+    display: flex;            /* Maquetación Flexbox */
+    flex-direction: column;   /* Apila cada personaje en filas continuas */
+    gap: 15px;                /* Distancia vertical de separación entre filas */
+    width: 100%;              /* Ancho adaptativo al 100% */
+    max-width: 900px;         /* Limite horizontal para mantener legibilidad */
+    margin: 20px auto 40px auto; /* Margen superior e inferior para aislamiento */
 }
 
+/* Fila estructural compuesta por avatar a la izquierda e información a la derecha */
+.character-card {
+    display: flex;            /* Alinea los bloques interno uno al lado del otro */
+    align-items: center;      /* Centra verticalmente la imagen y el bloque de texto */
+    gap: 15px;                /* Separación horizontal entre la foto y los datos */
+    width: 100%;              /* Ancho completo del bloque contenedor */
+}
+
+/* Marco exterior verde contenedor de la fotografía del personaje */
+.character-image-box {
+    width: 100px;             /* Ancho fijo cuadrado */
+    height: 100px;            /* Alto fijo cuadrado */
+    background-color: #008000;/* Fondo marco en verde */
+    padding: 6px;             /* Relleno para formar un borde interno uniforme */
+    display: flex;            /* Alineación del recurso */
+    justify-content: center;  /* Centrado horizontal de la imagen */
+    align-items: center;      /* Centrado vertical de la imagen */
+    flex-shrink: 0;           /* Previene que flexbox reduzca las dimensiones del cuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra para simular volumen */
+}
+
+/* Renderizado y ajuste de la imagen dentro del recuadro verde */
+.character-image-box img {
+    width: 100%;              /* Ajusta al 100% del área contenedora con padding */
+    height: 100%;             /* Ajusta al 100% de la altura disponible */
+    object-fit: cover;        /* Recorta proporcionalmente la imagen evitando deformaciones */
+    background-color: #ffffff;/* Fondo blanco en caso de imágenes transparentes */
+}
+
+/* Bloque rojo contenedor con el nombre y la biografía/descripción */
+.character-info-box {
+    background-color: #c40000;               /* Fondo rojo */
+    color: #ffffff;                          /* Texto en color blanco */
+    padding: 14px 20px;                      /* Espaciado interno horizontal y vertical */
+    flex: 1;                                 /* Toma todo el ancho restante disponible en la fila */
+    min-height: 100px;                       /* Iguala la altura mínima a la de la foto adyacente */
+    display: flex;                           /* Flexbox interno */
+    flex-direction: column;                  /* Apila título y párrafo */
+    justify-content: center;                 /* Centra verticalmente el contenido dentro del cuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);/* Sombra leve */
+}
+
+/* Nombre del personaje */
+.character-info-box h3 {
+    font-size: 1.15rem;                      /* Tamaño de fuente */
+    font-weight: bold;                       /* Negrita para el nombre */
+    font-family: 'Times New Roman', Times, serif; /* Fuente serif formal */
+    margin-bottom: 4px;                      /* Espaciado inferior tenue */
+}
+
+/* Descripción o detalle del personaje */
+.character-info-box p {
+    font-size: 0.9rem;                       /* Tamaño tipográfico legible */
+    line-height: 1.35;                       /* Interlineado cómodo */
+    font-family: 'Times New Roman', Times, serif; /* Fuente formal */
+    margin: 0;                               /* Sin márgenes adicionales */
+}
+
+/* ==========================================
+   7. DATOS CURIOSOS (TARJETAS ROJAS CON FORMA DE FLECHA ALARGADA)
+   ========================================== */
+/* Contenedor vertical de los bloques de datos curiosos */
+.facts-container {
+    display: flex;            /* Disposición flex */
+    flex-direction: column;   /* Ubicación en vertical una sobre otra */
+    align-items: center;      /* Centra los bloques */
+    gap: 18px;                /* Espaciado entre cada dato */
+    width: 100%;              /* Ocupa el 100% disponible */
+    max-width: 950px;         /* Ancho amplio para que el corte de flecha sea fluido */
+    margin: 20px auto 30px auto; /* Espaciado con el resto de componentes */
+}
+
+/* Tarjeta individual con estilo de cinta/flecha extendida */
 .fact-card {
-    background-color: #c40000;
-    color: #ffffff;
-    padding: 18px 45px 18px 25px;
-    width: 100%;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: #c40000;               /* Fondo rojo */
+    color: #ffffff;                          /* Texto blanco */
+    padding: 18px 45px 18px 25px;             /* Relleno con extra a la derecha por la punta de la flecha */
+    width: 100%;                             /* Extensión horizontal completa */
+    text-align: left;                        /* Lectura alineada a la izquierda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);/* Proyección de sombra */
     
-    /* Forma de flecha roja alargada hacia la derecha */
+    /* Forma de flecha alargada apuntando hacia la derecha (punta al 100% 50%) */
     clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
     
-    transition: transform 0.25s ease, filter 0.25s ease;
+    transition: transform 0.25s ease, filter 0.25s ease; /* Transición para efecto Hover */
 }
 
+/* Efecto hover al desplazar el cursor sobre un dato curioso */
 .fact-card:hover {
-    transform: translateX(5px);
-    filter: brightness(1.15);
+    transform: translateX(5px);              /* Desplaza la tarjeta 5px a la derecha */
+    filter: brightness(1.15);                /* Aumenta la luminosidad del color */
 }
 
+/* Encabezado o título del dato curioso */
 .fact-card h3 {
-    font-size: 1.15rem;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 6px;
+    font-size: 1.15rem;                      /* Tamaño de fuente */
+    font-weight: bold;                       /* Resaltado en negrita */
+    font-family: 'Times New Roman', Times, serif; /* Fuente serif formal */
+    margin-bottom: 6px;                      /* Separación con la descripción */
 }
 
+/* Cuerpo de texto del dato curioso */
 .fact-card p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
+    font-size: 0.95rem;                      /* Tamaño de lectura estándar */
+    line-height: 1.4;                        /* Altura de línea fluida */
+    font-family: 'Times New Roman', Times, serif; /* Fuente serif formal */
+    margin: 0;                               /* Limpieza de márgenes predeterminados */
 } 
+
 /* ==========================================
    8. PIE DE PÁGINA (FOOTER)
    ========================================== */
+/* Bloque final de cierre en la parte inferior de la página */
 footer {
-    width: 100%;
-    background-color: #008000;
-    padding: 10px 15px;
-    text-align: center;
-    margin-top: auto;
+    width: 100%;              /* Extensión a todo lo ancho */
+    background-color: #008000;/* Fondo verde oscuro para equilibrar el color del nav superior */
+    padding: 10px 15px;       /* Relleno interno */
+    text-align: center;       /* Centrado de los créditos o copyright */
+    margin-top: auto;         /* Empuja el footer al fondo de la pantalla si hay poco contenido */
 }
 
+/* Texto dentro del pie de página */
 footer p {
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    color: #ffffff;           /* Texto blanco */
+    font-size: 1rem;          /* Tamaño de fuente estándar */
+    font-weight: bold;        /* Negrita */
+    margin: 0;                /* Sin márgenes externos */
+    font-family: Arial, sans-serif; /* Cambio a fuente sans-serif legible para textos de cierre */
 }

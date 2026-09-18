@@ -1,33 +1,38 @@
 <!DOCTYPE html>
+<!-- Declaración del estándar HTML5 e idioma del sitio -->
 <html lang="es">
 <head>
+    <!-- Metadatos de codificación y diseño adaptable a pantallas móviles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Septiembre - Fechas Importantes</title>
+    
+    <!-- Enlace a la hoja de estilos externa compartida -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <!-- Encabezado -->
+    <!-- Encabezado con logo corporativo y título de la sección -->
     <header>
         <img class="logo" src="bandera.jpg" alt="Bandera de México">
         <h1>Fechas importantes</h1>
         <p>Septiembre</p>
     </header>
 
-    <!-- Barra de navegación con "Fechas importantes" activa -->
- <nav class="nav-horizontal">
-    <a href="index.html">Inicio</a>
-    <a href="fechas.html" class="active">Fechas importantes</a>
-    <a href="personajes.html">Personajes</a>
-    <a href="datos-curiosos.html">Datos curiosos</a>
- </nav>
+    <!-- Menú de navegación principal (marcada activa la página actual) -->
+    <nav class="nav-horizontal">
+        <a href="index.html">Inicio</a>
+        <!-- Enlace activo -->
+        <a href="fechas.html" class="active">Fechas importantes</a>
+        <a href="personajes.html">Personajes</a>
+        <a href="datos-curiosos.html">Datos curiosos</a>
+    </nav>
 
-    <!-- Contenido principal -->
+    <!-- Contenedor del contenido principal -->
     <main>
         <h2 class="section-title">Línea del tiempo</h2>
 
-        <!-- Bloques rojos -->
+        <!-- Contenedor en flexbox para la secuencia de tarjetas históricas (estilo flecha roja) -->
         <div class="timeline-container">
             <div class="date-card card-red">
                 <h3>13 de septiembre</h3>
@@ -53,7 +58,7 @@
 
         <h2 class="sub-title">Otras fechas</h2>
 
-        <!-- Bloques verdes -->
+        <!-- Bloque secundario para efemérides complementarias (tarjetas verdes) -->
         <div class="other-dates-container">
             <div class="date-card card-green">
                 <h3>8 de septiembre</h3>
@@ -70,7 +75,7 @@
         </div>
     </main>
 
-    <!-- Pie de página -->
+    <!-- Pie de página con los datos de identificación del autor -->
     <footer>
         <p>Adame Durán Brenda Denis 5-J 0783</p>
     </footer>
